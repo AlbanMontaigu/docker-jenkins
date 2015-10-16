@@ -33,7 +33,7 @@ RUN curl -fSL "https://${DOCKER_BUCKET}/builds/Linux/x86_64/docker-$DOCKER_VERSI
     && echo "${DOCKER_SHA256}  /usr/local/bin/docker" | sha256sum -c - \
     && chmod +x /usr/local/bin/docker \
     && groupadd docker \
-    && sudo gpasswd -a jenkins docker
+    && gpasswd -a jenkins docker
 
 # Jenkins configuration
 COPY jenkins/executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
