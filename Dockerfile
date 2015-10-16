@@ -32,13 +32,8 @@ RUN apt-get update \
 RUN curl -fSL "https://${DOCKER_BUCKET}/builds/Linux/x86_64/docker-$DOCKER_VERSION" -o /usr/local/bin/docker \
     && echo "${DOCKER_SHA256}  /usr/local/bin/docker" | sha256sum -c - \
     && chmod +x /usr/local/bin/docker \
-    && groupadd docker \
-    && gpasswd -a jenkins docker
 
 # Jenkins configuration
 COPY jenkins/executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
 COPY jenkins/plugins.txt /usr/share/jenkins/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
-
-# drop back to the regular jenkins user - good practice
-USER jenkins 
