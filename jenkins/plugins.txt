@@ -41,3 +41,4 @@ ssh-slaves:1.10
 subversion:2.5.3
 translation:1.12
 windows-slaves:1.1
+sidebar-link:1.7
