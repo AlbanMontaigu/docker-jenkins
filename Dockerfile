@@ -24,7 +24,7 @@ ENV DOCKER_BUCKET="get.docker.com" \
 
 # System install required system components
 RUN apt-get update \
-    && apt-get install -y make git openssh-client
+    && apt-get install -y make git openssh-client \
     && rm -r /var/lib/apt/lists/*
 
 # Adds docker client
