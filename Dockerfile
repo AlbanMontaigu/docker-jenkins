@@ -31,7 +31,9 @@ RUN apt-get update \
 # @see https://github.com/docker-library/docker/blob/6c4acc40ebc56a539fd33e7799187641dc1e27b0/1.7/Dockerfile
 RUN curl -fSL "https://${DOCKER_BUCKET}/builds/Linux/x86_64/docker-$DOCKER_VERSION" -o /usr/local/bin/docker \
     && echo "${DOCKER_SHA256}  /usr/local/bin/docker" | sha256sum -c - \
-    && chmod +x /usr/local/bin/docker
+    && chmod +x /usr/local/bin/docker \
+    && groupadd docker \
+    && sudo gpasswd -a jenkins docker
 
 # Jenkins configuration
 COPY jenkins/executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
