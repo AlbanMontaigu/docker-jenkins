@@ -19,7 +19,7 @@ USER root
 
 # Environment configuration
 ENV DOCKER_VERSION="1.12.2" \
-    DOCKER_COMPOSE_VERSION="1.7.0"
+    DOCKER_COMPOSE_VERSION="1.8.1"
 
 # System install required system components
 RUN apt-get update \
