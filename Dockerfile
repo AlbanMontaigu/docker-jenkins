@@ -18,7 +18,7 @@ MAINTAINER alban.montaigu@gmail.com
 USER root
 
 # Environment configuration
-ENV DOCKER_VERSION="1.11.0" \
+ENV DOCKER_VERSION="1.12.2" \
     DOCKER_COMPOSE_VERSION="1.7.0"
 
 # System install required system components
