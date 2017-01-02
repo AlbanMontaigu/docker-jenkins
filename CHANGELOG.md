@@ -1,4 +1,7 @@
 
+## 2.32.1 (2017-01-03)
+- Update to jenkins 2.32.1
+
 ## 2.19.1 (2016-10-19)
 - Update to jenkins 2.19.1
 - Update to docker 1.11.0 since my servers need to be updated

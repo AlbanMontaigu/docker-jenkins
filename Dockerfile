@@ -9,7 +9,7 @@
 # ====================================================
 
 # Base is a nginx install customized bye me
-FROM jenkins:2.19.1
+FROM jenkins:2.32.1
 
 # Maintainer
 MAINTAINER alban.montaigu@gmail.com
